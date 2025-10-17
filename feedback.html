@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Зворотній зв'язок</title>
     <link rel="icon" href="dinoicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="feedback.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -30,60 +32,72 @@
             </ul>
         </nav>
     </header>
-    <hr>
         <main>
             <h2>Форма зворотного зв'язку</h2>
             <form method="post" accept-charset="utf-8">
                 <fieldset>
                     <legend>Персональна інформація</legend>
-                    <label for="name">Прізвище та ім’я:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="name">Прізвище та ім’я:</label>
+                    <input type="text" id="name" name="name" required>
         
-                    <label for="email">E-mail:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
         
-                    <label for="age">Вік:</label><br>
+                    <label for="age">Вік:</label>
+                    <input type="number" id="age" name="age" required>
                     
-                    <input type="number" id="age" name="age" required><br>
+                    <label for="education" id="educationLabel">Освіта:</label>
+                    <div class="education-options">
+                        <label for="education_full">
+                            <input type="radio" id="education_full" name="education" value="повна" required>
+                            Повна
+                        </label>
                     
-                    <p>Освіта:</p>
-                    <input type="radio" id="education_full" name="education" value="повна" required>
-                    <label for="education_full">Повна</label><br>
-    
-                    <input type="radio" id="education_incomplete" name="education" value="неповна">
-                    <label for="education_incomplete">Неповна</label><br>
-    
-                    <input type="radio" id="education_high" name="education" value="вища">
-                    <label for="education_high">Вища</label><br>
-    
-                    <input type="radio" id="education_prof" name="education" value="професійна">
-                    <label for="education_prof">Професійна</label>
+                        <label for="education_incomplete">
+                            <input type="radio" id="education_incomplete" name="education" value="неповна">
+                            Неповна
+                        </label>
+                    
+                        <label for="education_high">
+                            <input type="radio" id="education_high" name="education" value="вища">
+                            Вища
+                        </label>
+                    
+                        <label for="education_prof">
+                            <input type="radio" id="education_prof" name="education" value="професійна">
+                            Професійна
+                        </label>
+                    </div>
+                    
                 </fieldset>
-                <br>
         
-                <label for="feedbackGoal">Мета зворотнього зв’язку:</label><br>
-                <select id="feedbackGoal" name="feedbackGoal" required>
-                    <option value="помилка">Наявність помилки</option>
-                    <option value="співпраця">Співпраця</option>
-                    <option value="скарга">Скарга на порушення права власності</option>
-                    <option value="пропозиція">Пропозиція</option>
-                </select>
-                <br><br>
-        
-                <label for="details">Детально:</label><br>
+                <label for="feedbackGoal">
+                    Мета зворотнього зв’язку:
+                    <select id="feedbackGoal" name="feedbackGoal" required>
+                        <option value="помилка">Наявність помилки</option>
+                        <option value="співпраця">Співпраця</option>
+                        <option value="скарга">Скарга на порушення права власності</option>
+                        <option value="пропозиція">Пропозиція</option>
+                    </select>
+                </label>
+                
+
+                <label for="details">Детально:</label>
                 <textarea name="details" id="details" cols="30" rows="5" maxlength="500" placeholder="Опишіть суть вашого звернення" required></textarea>
-                <br><br>
-        
-                <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">Я погоджуюсь на обробку моїх персональних даних</label>
-                <br><br>
-        
-                <button type="submit">Відправити</button>
-                <button type="reset">Очистити</button>
+                
+                <label for="consent"> 
+                    <input type="checkbox" id="consent" name="consent" required>
+                    Я погоджуюсь на обробку моїх персональних даних
+                </label>
+                
+
+                <div class="form-buttons">
+                    <button type="submit">Відправити</button>
+                    <button type="reset">Очистити</button>
+                </div>
+
             </form>
         </main>
-        
-    <hr>
     <footer>
         <p>Адреса: м. Київ, вул. Богдана Гаврилишина, 24</p>
         <p>Телефон: +380 96 666 77 88</p>

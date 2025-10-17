@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <title>Динозавропедія</title>
     <link rel="icon" href="dinoicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mainpage.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Рудич Микола">
     <meta name="description" content="Енциклопедія про динозаврів">
     <meta name="keywords" content="динозаври, енциклопедія, юрський період, крейдовий період, мезозойська ера">
+    <style>
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        main {
+            margin-top: 10vh;
+        }
+
+        main section:first-of-type {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        main section#general-info:hover {
+            transform: translateY(3%);
+        }
+
+        @keyframes delayedGradient {
+            0% { background: lightgreen; }
+            100% { background: linear-gradient(to right, lightgreen, green); } 
+        }
+
+        footer p:hover {
+            animation-name: delayedGradient;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+            animation-duration: 0.01s;
+        }
+
+        main section:first-of-type p::first-line {
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,7 +72,6 @@
             </ul>
         </nav>
     </header>
-    <hr>
     <main>        
         <section>
             <h2><b>Мета створення енциклопедії</b></h2>
@@ -44,67 +82,67 @@
                 <li>Представити описи найвідоміших видів динозаврів із фото та короткими характеристиками.</li>
                 <li>Зацікавити користувачів додатковими фактами про життя мезозойської ери.</li>
             </ol>
-        </section>   
-        <br>
-        <section>
-            <h2>Загальна інформація</h2>
-            <table border="1">
-                <caption>Інформація про мезозойську еру та авторів енциклопедії</caption>
-                <thead>
-                    <tr>
-                        <th rowspan="2">Ера</th>
-                        <th rowspan="2">Період</th>
-                        <th rowspan="2"><span style="white-space: pre-line;">Тривалість 
-                            (млн років тому)</span></th>
-                        <th colspan="2">Основні характеристики</th>
-                    </tr>
-                    <tr>
-                        <th>Клімат</th>
-                        <th>Фауна і флора</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="3">Мезозой</td>
-                        <td>Тріасовий</td>
-                        <td>252-201</td>
-                        <td>Посушливий, теплий</td>
-                        <td>Поява перших динозаврів і ссавців</td>
-                    </tr>
-                    <tr>
-                        <td>Юрський</td>
-                        <td>201-145</td>
-                        <td>Теплий, вологий</td>
-                        <td>Розквіт динозаврів, поява перших птахів</td>
-                    </tr>
-                    <tr>
-                        <td>Крейдовий</td>
-                        <td>145-66</td>
-                        <td>Різноманітний (теплий -> прохолодний)</td>
-                        <td>Квіткові рослини, великі хижаки, масове вимирання</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="5">Автор: Рудич Микола Валентинович</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>       
+        </section>
+        <div class="info-layout">
+            <section id="general-info">
+                <h2>Загальна інформація</h2>
+                <table border="1">
+                    <caption>Інформація про мезозойську еру та авторів енциклопедії</caption>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Ера</th>
+                            <th rowspan="2">Період</th>
+                            <th rowspan="2"><span style="white-space: pre-line;">Тривалість 
+                                (млн років тому)</span></th>
+                            <th colspan="2">Основні характеристики</th>
+                        </tr>
+                        <tr>
+                            <th>Клімат</th>
+                            <th>Фауна і флора</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">Мезозой</td>
+                            <td>Тріасовий</td>
+                            <td>252-201</td>
+                            <td>Посушливий, теплий</td>
+                            <td>Поява перших динозаврів і ссавців</td>
+                        </tr>
+                        <tr>
+                            <td>Юрський</td>
+                            <td>201-145</td>
+                            <td>Теплий, вологий</td>
+                            <td>Розквіт динозаврів, поява перших птахів</td>
+                        </tr>
+                        <tr>
+                            <td>Крейдовий</td>
+                            <td>145-66</td>
+                            <td>Різноманітний (теплий -> прохолодний)</td>
+                            <td>Квіткові рослини, великі хижаки, масове вимирання</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Автор: Рудич Микола Валентинович</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>    
+            
+            <aside>
+                <h3>Цікаві факти</h3>
+                <ul>
+                    <li>Найбільший відомий динозавр – Аргентинозавр, довжина якого понад 30 метрів.</li>
+                    <li>Динозаври існували близько 165 мільйонів років.</li>
+                    <li>Перші птахи з’явились у Юрському періоді.</li>
+                    <li>Крейдовий період закінчився масовим вимиранням динозаврів.</li>
+                    <li>Квіткові рослини вперше з’явилися у Крейдовий період.</li>
+                    <li>Деякі динозаври мали пір’я, а не лише луску.</li>
+                </ul>
+            </aside>
+        </div>   
     </main>
-    <br>
-    <aside>
-        <h3>Цікаві факти</h3>
-        <ul>
-            <li>Найбільший відомий динозавр – Аргентинозавр, довжина якого понад 30 метрів.</li>
-            <li>Динозаври існували близько 165 мільйонів років.</li>
-            <li>Перші птахи з’явились у Юрському періоді.</li>
-            <li>Крейдовий період закінчився масовим вимиранням динозаврів.</li>
-            <li>Квіткові рослини вперше з’явилися у Крейдовий період.</li>
-            <li>Деякі динозаври мали пір’я, а не лише луску.</li>
-        </ul>
-    </aside>
-    <hr>
     <footer>
         <p>Адреса: м. Київ, вул. Богдана Гаврилишина, 24</p>
         <p>Телефон: +380 96 666 77 88</p>

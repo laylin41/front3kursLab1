@@ -1,0 +1,84 @@
+/* Стилі для головної сторінки*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section {
+    background: linear-gradient(to bottom, #d0f0c0, #f0fff0);
+    padding: 15px;
+    border-radius: 10px;
+    width: 95%;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+main section#general-info:hover {
+    background-color: #c0e6a5;
+    transform: scale(1.02);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #006400;
+    padding: 5px;
+    text-align: center;
+}
+
+#general-info h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+table caption {
+    margin: 5px 0;
+}
+
+.info-layout {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+section#general-info {
+    flex: 1 1 60%;
+    background: linear-gradient(to bottom, #d0f0c0, #f0fff0);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+    max-height: 400px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+aside {
+    flex: 1 1 25%;
+    background-color: #d8f0d8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 900px) {
+    .info-layout {
+        flex-direction: column;
+    }
+    section#general-info, aside {
+        width: 100%;
+    }
+}
+
+
